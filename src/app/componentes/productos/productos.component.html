@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="card-columns">
+        <div class="card m-2 animated fadeIn" style="width: 100%;" *ngFor="let product of products; let i = index">
+            <div style=" width: 50%; margin: auto; ">
+                <img [src]="product.imagen" class=" card-img-top " [alt]="product.name">
+            </div>
+            <div class="card-body ">
+                <h5 class="card-title ">{{ product.name }}</h5>
+                <p class="card-text ">{{ product.descripcion }}</p>
+                <button type="button" class="btn btn-outline-primary btn-block" (click)="verProducto(i)">Ver mas fotos</button>
+                <!-- <a [routerLink]="['/producto', i]" class="btn btn-outline-primary">Ver mas fotos</a> -->
+            </div>
+        </div>
+    </div>
+</div>

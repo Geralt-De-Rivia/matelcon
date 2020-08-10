@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="jumbotron animated fadeIn fast">
+        <h1 class="display-4">Bienvenidos a Matelcon</h1>
+        <p class="lead">Aca encontrara todo lo relacionado con electricos.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" [routerLink]="['/productos']">Ver Productos</a>
+    </div>
+
+    <!-- <div class="row"> -->
+    <!-- <div class="col">
+            <div class="card" style="width: 100%;" *ngIf="mostrar">
+                <div style="width: 50%; margin: auto;">
+                    <img [src]="bebe.imagen" class="card-img-top" alt="bebe">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ bebe.name }}</h5>
+                    <p class="card-text">{{ bebe.descripcion }}</p>
+                    <a href="#" class="btn btn-primary">Ver mas fotos</a>
+                </div>
+            </div>
+
+            <button (click)="mostrar = !mostrar" type="button" class="btn btn-outline-primary btn-block">Mostrar / Ocultar</button>
+        </div> -->
+
+    <div class="card-columns">
+        <div class="card m-2 animated fadeIn" style="width: 100%;" *ngFor="let baby of babys">
+            <div style=" width: 50%; margin: auto; ">
+                <img [src]="baby.imagen" class=" card-img-top " [alt]="baby.name">
+            </div>
+            <div class="card-body ">
+                <h5 class="card-title ">{{ baby.name }}</h5>
+                <p class="card-text ">{{ baby.descripcion }}</p>
+                <button type="button" class="btn btn-outline-primary btn-block">Ver mas fotos</button>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+</div>
